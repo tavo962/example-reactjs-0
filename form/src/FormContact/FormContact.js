@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import Swal from 'sweetalert2'
 
 function FormContact() {
 	const [ formStatus, setFormStatus ] = useState( 'Send' );
@@ -16,6 +17,13 @@ function FormContact() {
 			email: email.value,
 			comment: comment.value,
 		};
+
+		Swal.fire( {
+			"allowOutsideClick": false,
+			"text": "Espere un momento por favor.",
+			"title": "Enviando mensaje ...",
+		} )
+		Swal.showLoading();
 	}	// end function
 
 	const button = useRef();
