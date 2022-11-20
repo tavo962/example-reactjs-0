@@ -1,0 +1,14 @@
+.cupcake {
+	background: silver;
+	margin: 20px;
+	padding: 10px;
+	text-align: center;
+}
+
+.cupcake img {
+	max-width: 300px;
+}
+
+.vendido {
+	filter: grayscale(100%);
+}
